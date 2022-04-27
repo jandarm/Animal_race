@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Лошадь_ждёт.png-d6cedaa0d890b36499b6d0d36c45b794.stex"
+path="res://.import/Лягушка_анимация.png-9a5869bb9d12ccbadfc4184843b5dd89.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Animals/Лошадь_ждёт.png"
-dest_files=[ "res://.import/Лошадь_ждёт.png-d6cedaa0d890b36499b6d0d36c45b794.stex" ]
+source_file="res://Assets/Animals/Лягушка_анимация.png"
+dest_files=[ "res://.import/Лягушка_анимация.png-9a5869bb9d12ccbadfc4184843b5dd89.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Олень_ждёт.png-046d4b7c45f5d020b6b9c2e3a3e40eec.stex"
+path="res://.import/Верблюд_анимация.png-731182e51bf57f0d6b63fb13abe64cd1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Animals/Олень_ждёт.png"
-dest_files=[ "res://.import/Олень_ждёт.png-046d4b7c45f5d020b6b9c2e3a3e40eec.stex" ]
+source_file="res://Assets/Animals/Верблюд_анимация.png"
+dest_files=[ "res://.import/Верблюд_анимация.png-731182e51bf57f0d6b63fb13abe64cd1.stex" ]
 
 [params]
 
