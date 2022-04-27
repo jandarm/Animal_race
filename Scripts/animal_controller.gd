@@ -29,3 +29,6 @@ func move():
 
 func stop():
 	animation_player.play("Idle")
+
+func change_sprite(path: Resource):
+	get_node("Animal_sprite").set_texture(path)
