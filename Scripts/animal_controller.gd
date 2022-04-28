@@ -9,7 +9,7 @@ var animation_player
 var target = 0
 
 func _ready():
-	movement_body = get_node("Animal_sprite")
+	movement_body = get_node(".")
 	animation_player = get_node("AnimationPlayer")
 	pass # Replace with function body.
 
@@ -31,4 +31,4 @@ func stop():
 	animation_player.play("Idle")
 
 func change_sprite(path: Resource):
-	get_node("Animal_sprite").set_texture(path)
+	get_node(".").set_texture(path)

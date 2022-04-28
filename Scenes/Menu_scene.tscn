@@ -1,5 +1,50 @@
 [gd_scene format=2]
 
-[node name="Control" type="Control"]
+[node name="GridContainer" type="GridContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="btn_settings" type="Button" parent="."]
+margin_right = 338.0
+margin_bottom = 600.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Settings"
+expand_icon = true
+
+[node name="btn_play" type="Button" parent="."]
+margin_left = 342.0
+margin_right = 680.0
+margin_bottom = 600.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Play"
+flat = true
+expand_icon = true
+
+[node name="btn_back" type="Button" parent="."]
+margin_left = 684.0
+margin_right = 1022.0
+margin_bottom = 600.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Exit"
+flat = true
+expand_icon = true
