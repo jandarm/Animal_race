@@ -23,12 +23,15 @@ func _process(delta):
 #func _process(delta):
 #	pass
 func move():
-	animation_player.play("Run")
+	run()
 	movement_body.position.x = target
 	target += 100
 
 func stop():
 	animation_player.play("Idle")
+
+func run():
+	animation_player.play("Run")
 
 func change_sprite(path: Resource):
 	get_node(".").set_texture(path)

@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Animal_race"
-run/main_scene="res://Scenes/Main_scene.tscn"
+run/main_scene="res://Scenes/Menu_scene.tscn"
 config/icon="res://icon.png"
 
 [display]
