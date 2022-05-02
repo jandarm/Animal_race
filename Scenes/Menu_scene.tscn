@@ -14,24 +14,24 @@ columns = 3
 
 [node name="btn_settings" parent="." instance=ExtResource( 1 )]
 margin_right = 338.0
-margin_bottom = 600.0
+margin_bottom = 596.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-clip_text = true
 
 [node name="btn_play" parent="." instance=ExtResource( 1 )]
 margin_left = 342.0
 margin_right = 680.0
-margin_bottom = 600.0
+margin_bottom = 596.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+stretch_mode = 5
 
 [node name="btn_exit" parent="." instance=ExtResource( 1 )]
 margin_left = 684.0
 margin_right = 1022.0
-margin_bottom = 600.0
+margin_bottom = 596.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Animal_sprite" parent="." instance=ExtResource( 2 )]
-position = Vector2( 525, 392 )
+position = Vector2( 515, 392 )
