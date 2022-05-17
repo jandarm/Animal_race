@@ -1,17 +1,12 @@
 extends Node
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var movement_body
 var animation_player
-# Called when the node enters the scene tree for the first time.
 var target = 0
 
 func _ready():
 	movement_body = get_node(".")
 	animation_player = get_node("AnimationPlayer")
-	pass # Replace with function body.
 
 func _process(delta):
 	if movement_body.position.x < target:
@@ -19,13 +14,17 @@ func _process(delta):
 	else:
 		stop()
 	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
 func move():
-	run()
-	movement_body.position.x = target
-	target += 100
+	if(target < (get_viewport().get_visible_rect().size[0] - 200)):
+		run()
+		movement_body.position.x = target
+		target += 100
+	else:
+		run()
+		movement_body.position.x = target
+		target += 100
+		print("finish")
 
 func stop():
 	animation_player.play("Idle")
@@ -35,3 +34,4 @@ func run():
 
 func change_sprite(path: Resource):
 	get_node(".").set_texture(path)
+
