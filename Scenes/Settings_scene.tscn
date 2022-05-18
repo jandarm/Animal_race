@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Change_scene_button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Capitalist.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scripts/game_settings.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
@@ -10,6 +12,7 @@ font_data = ExtResource( 2 )
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -27,13 +30,57 @@ custom_fonts/font = SubResource( 1 )
 text = "назад"
 
 [node name="TeamNumberBtn" type="OptionButton" parent="."]
-margin_left = 379.0
-margin_top = 51.0
-margin_right = 451.0
-margin_bottom = 102.0
+margin_left = 267.0
+margin_top = 57.0
+margin_right = 339.0
+margin_bottom = 89.0
 text = "2"
 align = 1
 items = [ "2", null, false, 2, null, "3", null, false, 3, null, "4", null, false, 4, null, "5", null, false, 5, null, "6", null, false, 6, null ]
 selected = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="TeamNumberBtn"]
+margin_left = -200.0
+margin_top = -4.0
+margin_right = -20.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 3 )
+text = "Число команд"
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="."]
+margin_left = 266.0
+margin_top = 111.0
+margin_right = 343.0
+margin_bottom = 141.0
+min_value = 3.0
+value = 3.0
+rounded = true
+align = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label2" type="Label" parent="SpinBox"]
+margin_left = -197.0
+margin_top = -6.0
+margin_right = -17.0
+margin_bottom = 33.0
+custom_fonts/font = ExtResource( 3 )
+text = "Сложность"
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 12.0
+margin_top = 210.0
+margin_right = 1014.0
+margin_bottom = 522.0
+columns = 6
+
+[connection signal="item_selected" from="TeamNumberBtn" to="." method="_on_TeamNumberBtn_item_selected"]
+[connection signal="value_changed" from="SpinBox" to="." method="_on_SpinBox_value_changed"]
 
 [editable path="Button"]
