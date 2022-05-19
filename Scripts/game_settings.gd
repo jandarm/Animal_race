@@ -1,15 +1,16 @@
 extends Node
 
+var blinds
 
 func _ready():
-#	$OptionButton.theme = Theme.new()
-#	$OptionButton.theme.default_font = DynamicFont.new()
-#	$OptionButton.theme.default_font.font_data = load("res://Assets/Font.tres")
+	blinds = $GridCurtain.get_children()
+	blinds[0].hide()
+	blinds[1].hide()
 	pass
 
 func _on_TeamNumberBtn_item_selected(index):
+	blinds[index].hide()
 	GameManager.team_count = $TeamNumberBtn.get_item_text(index)
 
 func _on_SpinBox_value_changed(value):
 	GameManager.steps_to_win = value
-
