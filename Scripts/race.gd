@@ -1,8 +1,5 @@
 extends Node
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var horse = preload("res://Assets/Animals/Лошадь_анимация.png")
 var deer = preload("res://Assets/Animals/Олень_анимация.png")
 var camel = preload("res://Assets/Animals/Верблюд_анимация.png")
@@ -11,20 +8,16 @@ var frog = preload("res://Assets/Animals/Лягушка_анимация.png")
 var turtle = preload("res://Assets/Animals/Черепаха_анимация.png")
 var animal_scene = preload("res://Scenes/Animal_scene.tscn")
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	var zoo = []
-	zoo.push_back(horse)
-	zoo.push_back(deer)
-	zoo.push_back(camel)
-	zoo.push_back(bear)
-	zoo.push_back(frog)
-	zoo.push_back(turtle)
+	for element in GameManager.teams:
+		zoo.push_back(load(element))
 	
 	var window = OS.window_size
 	
 	var x_spacing = (window.x - zoo.size() * 150)/(zoo.size()+1)
-	var y_spacing = (window.y - zoo.size() * 6)/(zoo.size()+1)
+	var y_spacing = (window.y - zoo.size() * GameManager.team_count)/(zoo.size()+1)
 	var i = 0
 	var scaling = 1
 	
@@ -51,7 +44,6 @@ func _ready():
 		
 		i += 1
 		scaling += 1
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

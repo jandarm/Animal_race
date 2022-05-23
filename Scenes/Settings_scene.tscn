@@ -14,19 +14,19 @@ font_data = ExtResource( 2 )
 resource_local_to_scene = true
 bg_color = Color( 0.937255, 0.854902, 0.537255, 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=6]
 resource_local_to_scene = true
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=14]
 resource_local_to_scene = true
 bg_color = Color( 0.839216, 0.937255, 0.537255, 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=15]
 resource_local_to_scene = true
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=16]
 resource_local_to_scene = true
 bg_color = Color( 0.537255, 0.937255, 0.917647, 1 )
 
@@ -146,8 +146,7 @@ margin_bottom = 240.0
 custom_styles/panel = SubResource( 2 )
 
 [node name="OptionButton" parent="GridCards/Card1" index="2"]
-custom_fonts/font = SubResource( 3 )
-items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
+custom_fonts/font = SubResource( 6 )
 
 [node name="Card2" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 167.0
@@ -156,11 +155,10 @@ margin_right = 330.0
 margin_bottom = 240.0
 
 [node name="Panel" parent="GridCards/Card2" index="0"]
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 14 )
 
 [node name="OptionButton" parent="GridCards/Card2" index="2"]
-custom_fonts/font = SubResource( 5 )
-items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
+custom_fonts/font = SubResource( 15 )
 
 [node name="Card3" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 334.0
@@ -169,11 +167,10 @@ margin_right = 497.0
 margin_bottom = 240.0
 
 [node name="Panel" parent="GridCards/Card3" index="0"]
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 16 )
 
 [node name="OptionButton" parent="GridCards/Card3" index="2"]
 custom_fonts/font = SubResource( 7 )
-items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card4" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 501.0
@@ -186,7 +183,6 @@ custom_styles/panel = SubResource( 8 )
 
 [node name="OptionButton" parent="GridCards/Card4" index="2"]
 custom_fonts/font = SubResource( 9 )
-items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card5" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 668.0
@@ -199,7 +195,6 @@ custom_styles/panel = SubResource( 10 )
 
 [node name="OptionButton" parent="GridCards/Card5" index="2"]
 custom_fonts/font = SubResource( 11 )
-items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card6" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 835.0
@@ -212,69 +207,6 @@ custom_styles/panel = SubResource( 12 )
 
 [node name="OptionButton" parent="GridCards/Card6" index="2"]
 custom_fonts/font = SubResource( 13 )
-items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
-
-[node name="GridCurtain" type="GridContainer" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -501.0
-margin_top = -69.0
-margin_right = 501.0
-margin_bottom = 171.0
-mouse_filter = 2
-columns = 6
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Panel1" type="Panel" parent="GridCurtain"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_right = 163.0
-margin_bottom = 240.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel2" type="Panel" parent="GridCurtain"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_left = 167.0
-margin_right = 330.0
-margin_bottom = 240.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel3" type="Panel" parent="GridCurtain"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_left = 334.0
-margin_right = 497.0
-margin_bottom = 240.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel4" type="Panel" parent="GridCurtain"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_left = 501.0
-margin_right = 664.0
-margin_bottom = 240.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel5" type="Panel" parent="GridCurtain"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_left = 668.0
-margin_right = 831.0
-margin_bottom = 240.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Panel6" type="Panel" parent="GridCurtain"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_left = 835.0
-margin_right = 998.0
-margin_bottom = 240.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [connection signal="item_selected" from="TeamNumberBtn" to="." method="_on_TeamNumberBtn_item_selected"]
 [connection signal="value_changed" from="SpinBox" to="." method="_on_SpinBox_value_changed"]

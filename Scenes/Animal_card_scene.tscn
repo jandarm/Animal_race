@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Animal_scene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Font.tres" type="DynamicFont" id=2]
@@ -13,6 +13,9 @@ bg_color = Color( 0.937255, 0.854902, 0.537255, 1 )
 default_font = ExtResource( 2 )
 Fonts/fonts/large = ExtResource( 2 )
 Fonts/fonts/normal = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.709804 )
 
 [node name="AnimalCard" type="Control"]
 margin_left = -76.0
@@ -57,5 +60,12 @@ clip_text = true
 align = 1
 items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 selected = 0
+
+[node name="CardShadow" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
 
 [connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected"]
