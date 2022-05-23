@@ -4,6 +4,7 @@ var movement_body
 var animation_player
 var target = 0
 export var is_static = false
+signal i_finished
 
 func _ready():
 	movement_body = get_node(".")
@@ -16,6 +17,8 @@ func _process(delta):
 			movement_body.position.x += 5
 		else:
 			stop()
+	if movement_body.position.x >( OS.window_size.x - 100):
+		emit_signal("i_finished")
 
 func move():
 	set_static(false)

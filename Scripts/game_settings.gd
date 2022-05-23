@@ -26,4 +26,5 @@ func open_blinds(amount):
 		amount -= 1
 
 func rewrite_manager_sprites(this_card):
-	print(this_card)
+	var card_index = blinds.find(this_card)
+	GameManager.teams[card_index] = this_card.get_sprite()

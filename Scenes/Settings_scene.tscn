@@ -147,6 +147,7 @@ custom_styles/panel = SubResource( 2 )
 
 [node name="OptionButton" parent="GridCards/Card1" index="2"]
 custom_fonts/font = SubResource( 6 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card2" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 167.0
@@ -159,6 +160,7 @@ custom_styles/panel = SubResource( 14 )
 
 [node name="OptionButton" parent="GridCards/Card2" index="2"]
 custom_fonts/font = SubResource( 15 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card3" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 334.0
@@ -171,6 +173,7 @@ custom_styles/panel = SubResource( 16 )
 
 [node name="OptionButton" parent="GridCards/Card3" index="2"]
 custom_fonts/font = SubResource( 7 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card4" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 501.0
@@ -183,6 +186,7 @@ custom_styles/panel = SubResource( 8 )
 
 [node name="OptionButton" parent="GridCards/Card4" index="2"]
 custom_fonts/font = SubResource( 9 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card5" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 668.0
@@ -195,6 +199,7 @@ custom_styles/panel = SubResource( 10 )
 
 [node name="OptionButton" parent="GridCards/Card5" index="2"]
 custom_fonts/font = SubResource( 11 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card6" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 835.0
@@ -207,6 +212,7 @@ custom_styles/panel = SubResource( 12 )
 
 [node name="OptionButton" parent="GridCards/Card6" index="2"]
 custom_fonts/font = SubResource( 13 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [connection signal="item_selected" from="TeamNumberBtn" to="." method="_on_TeamNumberBtn_item_selected"]
 [connection signal="value_changed" from="SpinBox" to="." method="_on_SpinBox_value_changed"]

@@ -17,7 +17,7 @@ func _ready():
 	var window = OS.window_size
 	
 	var x_spacing = (window.x - zoo.size() * 150)/(zoo.size()+1)
-	var y_spacing = (window.y - zoo.size() * GameManager.team_count)/(zoo.size()+1)
+	var y_spacing = (window.y - zoo.size() * int(GameManager.team_count))/(zoo.size()+1)
 	var i = 0
 	var scaling = 1
 	
@@ -38,6 +38,7 @@ func _ready():
 #		+150 отвечает за отступ "стаи" от верхнего края экрана
 		racer.set_position(Vector2(0, new_animal_y + 150))
 		add_child(racer)
+		racer.connect("i_finished", $".", "game_over")
 		
 		
 		button.connect("pressed", racer, "move")
@@ -46,6 +47,8 @@ func _ready():
 		scaling += 1
 
 
+func game_over():
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
