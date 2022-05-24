@@ -5,6 +5,7 @@ var animation_player
 var target = 0
 export var is_static = false
 signal i_finished
+var is_finished = false
 
 func _ready():
 	movement_body = get_node(".")
@@ -17,19 +18,16 @@ func _process(delta):
 			movement_body.position.x += 5
 		else:
 			stop()
-	if movement_body.position.x >( OS.window_size.x - 100):
-		emit_signal("i_finished")
+	if movement_body.position.x >( OS.window_size.x - 100) and is_finished == false:
+		emit_signal("i_finished", self)
+		is_finished = true
 
-func move():
+func move(distance:int = GameManager.steps_to_win):
 	set_static(false)
 	if(target < (get_viewport().get_visible_rect().size[0] - 200)):
 		run()
 		movement_body.position.x = target
-		target += 100
-	else:
-		run()
-		movement_body.position.x = target
-		target += 100
+		target += distance * 100
 
 func stop():
 	animation_player.play("Idle")

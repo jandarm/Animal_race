@@ -40,15 +40,17 @@ func _ready():
 		add_child(racer)
 		racer.connect("i_finished", $".", "game_over")
 		
-		
 		button.connect("pressed", racer, "move")
 		
 		i += 1
 		scaling += 1
 
+func game_over(winner):
+	var test = $'.'.get_children()
+	var test_index = test.find(winner)
+	print(test[test_index])
 
-func game_over():
+# warning-ignore:unused_argument
+func _process(delta):
+	
 	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
