@@ -27,7 +27,12 @@ func move(distance:int = GameManager.steps_to_win):
 	if(target < (get_viewport().get_visible_rect().size[0] - 200)):
 		run()
 		movement_body.position.x = target
-		target += distance * 100
+		target += 1024/distance
+#	last movement before finish
+	else:
+		run()
+		movement_body.position.x = target
+		target += 1024
 
 func stop():
 	animation_player.play("Idle")

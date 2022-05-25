@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Change_scene_button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Capitalist.ttf" type="DynamicFontData" id=2]
@@ -6,8 +6,17 @@
 [ext_resource path="res://Scripts/game_settings.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Animal_card_scene.tscn" type="PackedScene" id=5]
 
+[sub_resource type="Gradient" id=17]
+colors = PoolColorArray( 0.792969, 0.821072, 1, 1, 0.773438, 0.968803, 1, 1 )
+
+[sub_resource type="GradientTexture" id=18]
+gradient = SubResource( 17 )
+width = 100
+
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=2]
@@ -65,6 +74,20 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.0
+margin_top = 607.0
+margin_right = -411.0
+margin_bottom = 1038.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_rotation = -90.0
+mouse_filter = 2
+texture = SubResource( 18 )
+expand = true
 
 [node name="Button" parent="." instance=ExtResource( 1 )]
 margin_left = 12.0
@@ -147,6 +170,7 @@ custom_styles/panel = SubResource( 2 )
 
 [node name="OptionButton" parent="GridCards/Card1" index="2"]
 custom_fonts/font = SubResource( 6 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card2" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 167.0
@@ -159,6 +183,7 @@ custom_styles/panel = SubResource( 14 )
 
 [node name="OptionButton" parent="GridCards/Card2" index="2"]
 custom_fonts/font = SubResource( 15 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card3" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 334.0
@@ -171,6 +196,7 @@ custom_styles/panel = SubResource( 16 )
 
 [node name="OptionButton" parent="GridCards/Card3" index="2"]
 custom_fonts/font = SubResource( 7 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card4" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 501.0
@@ -183,6 +209,7 @@ custom_styles/panel = SubResource( 8 )
 
 [node name="OptionButton" parent="GridCards/Card4" index="2"]
 custom_fonts/font = SubResource( 9 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card5" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 668.0
@@ -195,6 +222,7 @@ custom_styles/panel = SubResource( 10 )
 
 [node name="OptionButton" parent="GridCards/Card5" index="2"]
 custom_fonts/font = SubResource( 11 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [node name="Card6" parent="GridCards" instance=ExtResource( 5 )]
 margin_left = 835.0
@@ -207,6 +235,7 @@ custom_styles/panel = SubResource( 12 )
 
 [node name="OptionButton" parent="GridCards/Card6" index="2"]
 custom_fonts/font = SubResource( 13 )
+items = [ "Верблюд", null, false, 0, null, "Лошадь", null, false, 1, null, "Лягушка", null, false, 2, null, "Медведь", null, false, 3, null, "Олень", null, false, 4, null, "Черепаха", null, false, 5, null ]
 
 [connection signal="item_selected" from="TeamNumberBtn" to="." method="_on_TeamNumberBtn_item_selected"]
 [connection signal="value_changed" from="SpinBox" to="." method="_on_SpinBox_value_changed"]

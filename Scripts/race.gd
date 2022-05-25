@@ -46,11 +46,7 @@ func _ready():
 		scaling += 1
 
 func game_over(winner):
-	var test = $'.'.get_children()
-	var test_index = test.find(winner)
-	print(test[test_index])
-
-# warning-ignore:unused_argument
-func _process(delta):
-	
-	pass
+	var scene_nodes = $'.'.get_children()
+	var winner_index = scene_nodes.find(winner)
+	GameManager.winner = scene_nodes[winner_index].texture.resource_path
+	get_tree().change_scene("res://Scenes/Winner_scene.tscn")

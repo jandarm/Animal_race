@@ -3,6 +3,7 @@ extends Node
 var blinds
 
 func _ready():
+	GameManager.steps_to_win = $SpinBox.value
 	blinds = $GridCards.get_children()
 	open_blinds($TeamNumberBtn.get_selected_id())
 	for element in blinds:
